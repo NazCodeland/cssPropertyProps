@@ -1,0 +1,323 @@
+/* the consumer doesn't need to see this */
+@property --_background-color {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: initial;
+}
+
+/* these css props don't need to follow the pseudo-private-props naming convention, 
+  because a user defined css prop will take precedence over all the props defined in this file.
+  
+  Just to be explitcly clear and make it more readable, I've still chosen to name them using pseudo-private-props naming convention
+  read more about pseudo-private-props @ https://nerdy.dev/custom-prop-categories#4.-pseudo-private-props */
+
+* {
+	azimuth: var(--_azimuth, center);
+	background-attachment: var(--_background-attachment, scroll);
+	background-blur: var(--_background-blur, 0);
+	background-clip: var(--_background-clip, border-box);
+	background-color: var(--_background-color, transparent);
+	background-image: var(--_background-image, none);
+	background-origin: var(--_background-origin, padding-box);
+	background-position: var(--_background-position, 0% 0%);
+	background-repeat: var(--_background-repeat, repeat);
+	border-collapse: var(--_border-collapse, separate);
+	border-spacing: var(--_border-spacing, 0);
+	caption-side: var(--_caption-side, top);
+	color: var(--_color, depends on user agent);
+	cursor: var(--_cursor, auto);
+	direction: var(--_direction, ltr);
+	elevation: var(--_elevation, level);
+	empty-cells: var(--_empty-cells, show);
+	font: var(--_font, depends on user agent);
+	font-family: var(--_font-family, depends on user agent);
+	font-size: var(--_font-size, medium);
+	font-style: var(--_font-style, normal);
+	font-variant: var(--_font-variant, normal);
+	font-weight: var(--_font-weight, normal);
+	letter-spacing: var(--_letter-spacing, normal);
+	line-height: var(--_line-height, normal);
+	list-style: var(--_list-style, disc outside none);
+	list-style-image: var(--_list-style-image, none);
+	list-style-position: var(--_list-style-position, outside);
+	list-style-type: var(--_list-style-type, disc);
+	orphans: var(--_orphans, 2);
+	pitch: var(--_pitch, medium);
+	pitch-range: var(--_pitch-range, 50);
+	quotes: var(--_quotes, depends on user agent);
+	richness: var(--_richness, 50);
+	speak: var(--_speak, normal);
+	speak-header: var(--_speak-header, once);
+	speak-numeral: var(--_speak-numeral, continuous);
+	speak-punctuation: var(--_speak-punctuation, none);
+	speech-rate: var(--_speech-rate, medium);
+	stress: var(--_stress, 50);
+	text-align: var(--_text-align, start);
+	text-decoration: var(--_text-decoration, none);
+	text-indent: var(--_text-indent, 0);
+	text-transform: var(--_text-transform, none);
+	visibility: var(--_visibility, visible);
+	voice-family: var(--_voice-family, depends on user agent);
+	volume: var(--_volume, medium);
+	white-space: var(--_white-space, normal);
+	widows: var(--_widows, 2);
+	word-spacing: var(--_word-spacing, normal);
+
+	/* ------------------------------------------------ MARGIN ------------------------------------------------ */
+	/* margin: var(--_margin-top, 0) var(--_margin-right, 0) var(--_margin-bottom, 0) var(--_margin-left, 0);
+	margin-block-end: var(--_margin-block-end, 0);
+	margin-block-start: var(--_margin-block-start, 0);
+	margin-bottom: var(--_margin-bottom, 0);
+	margin-inline-end: var(--_margin-inline-end, 0);
+	margin-inline-start: var(--_margin-inline-start, 0);
+	margin-left: var(--_margin-left, 0);
+	margin-right: var(--_margin-right, 0);
+	margin-top: var(--_margin-top, 0);  */
+
+	/* ------------------------------------------------ PADDING ------------------------------------------------ */
+
+	/* this overwrites the default value for <ul> element */
+	/* padding: var(--_padding, 0); */
+	/* padding: var(--_padding-top, 0) var(--_padding-right, 0) var(--_padding-bottom, 0) var(--_padding-left, 0); */
+	/* --_padding: 0px 0px; */
+	/* --_padding-inline: 20px;
+	--_padding-block: 20px;
+	--_padding: var(--_padding-inline) var(--_padding-block) */
+	/* padding: var(--_padding) ; */
+	/* padding-block: var(--padding-block, 0); */
+	/* padding-inline: var(--padding-inline, 0); */
+	/* 
+
+	padding-block-start: var(--_padding-block-start, 0);
+	padding-block-end: var(--_padding-block-end, 0);
+	padding-inline-start: var(--_padding-inline-start, 0);
+	padding-inline-end: var(--_padding-inline-end, 0);
+	padding-top: var(--_padding-top, 0); 
+	padding-bottom: var(--_padding-bottom, 0);
+	padding-left: var(--_padding-left, 0);
+	padding-right: var(--_padding-right, 0);
+	*/
+
+	/* ------------------------------------------------ Border Properties ------------------------------------------------ */
+	/* border: var(--border-all, none);
+	border-top: var(--border-top, var(--border-all, none));
+	border-right: var(--border-right, var(--border-all, none));
+	border-bottom: var(--border-bottom, var(--border-all, none));
+	border-left: var(--border-left, var(--border-all, none)); */
+
+	/* ------------------------------------------------ BORDER-RADIUS ------------------------------------------------ */
+
+	/* position: var(--_position, 0);
+	left: 0;
+	top: 220px; */
+	/* ------------------------------------------------ BORDER-RADIUS ------------------------------------------------ */
+
+	/* border-radius: var(--_border-radius, 0); */
+	/* 
+	border-radius: var(--border-radius-top-left, 0) var(--border-radius-top-right, 0) var(--border-radius-bottom-right, 0) var(--border-radius-bottom-left, 0);
+	border-top-left-radius: var(--border-radius-top-left, 0);
+	border-top-right-radius: var(--border-radius-top-right, 0);
+	border-bottom-right-radius: var(--border-radius-bottom-right, 0);
+	border-bottom-left-radius: var(--border-radius-bottom-left, 0); */
+
+	/* ------------------------------------------------ Outline Properties ------------------------------------------------ */
+	/* outline: var(--outline-all, none);
+	outline-width: var(--outline-width, var(--outline-all, none));
+	outline-style: var(--outline-style, var(--outline-all, none));
+	outline-color: var(--outline-color, var(--outline-all, none)); */
+
+	/* ------------------------------------------------ Text Decoration ------------------------------------------------ */
+	/* text-decoration: var(--text-decoration, none);
+	text-decoration-line: var(--text-decoration-line, var(--text-decoration, none));
+	text-decoration-style: var(--text-decoration-style, var(--text-decoration, none));
+	text-decoration-color: var(--text-decoration-color, var(--text-decoration, none)); */
+
+	/* ------------------------------------------------ Flex Properties ------------------------------------------------ */
+	/* flex: var(--flex-all, initial);
+	flex-grow: var(--flex-grow, var(--flex-all, initial));
+	flex-shrink: var(--flex-shrink, var(--flex-all, initial));
+	flex-basis: var(--flex-basis, var(--flex-all, initial)); */
+
+	/* ------------------------------------------------ Transition Properties ------------------------------------------------ */
+	/* transition: var(--transition-all, none);
+	transition-property: var(--transition-property, var(--transition-all, none));
+	transition-duration: var(--transition-duration, var(--transition-all, none));
+	transition-timing-function: var(--transition-timing-function, var(--transition-all, none));
+	transition-delay: var(--transition-delay, var(--transition-all, none)); */
+}
+
+title,
+script {
+	display: none;
+}
+
+/* .card {
+	--_flex-direction: row;
+	flex-direction: var(--_flex-direction);
+
+	--_justify-content: flex-start;
+	justify-content: var(--_justify-content);
+
+	--_min-height: 0;
+	min-height: var(--_min-height);
+} */
+/* Target all elements that are flex containers */
+/* :is([style*="display:flex"], [style*="display:inline-flex"]) {
+	--_flex-direction: row;
+	flex-direction: var(--_flex-direction);
+
+	--_justify-content: flex-start;
+	justify-content: var(--_justify-content);
+
+	--_min-height: auto;
+	min-height: var(--_min-height);
+} */
+
+/* button {
+	--_appearance: auto;
+	appearance: var(--_appearance);
+
+	--_font-style: ;
+	font-style: var(--_font-style);
+
+	--_font-variant-ligatures: ;
+	font-variant-ligatures: var(--_font-variant-ligatures);
+
+	--_font-variant-caps: ;
+	font-variant-caps: var(--_font-variant-caps);
+
+	--_font-variant-numeric: ;
+	font-variant-numeric: var(--_font-variant-numeric);
+
+	--_font-variant-east-asian: ;
+	font-variant-east-asian: var(--_font-variant-east-asian);
+
+	--_font-variant-alternates: ;
+	font-variant-alternates: var(--_font-variant-alternates);
+
+	--_font-weight: ;
+	font-weight: var(--_font-weight);
+
+	--_font-stretch: ;
+	font-stretch: var(--_font-stretch);
+
+	--_font-size: ;
+	font-size: var(--_font-size);
+
+	--_font-family: ;
+	font-family: var(--_font-family);
+
+	--_font-optical-sizing: ;
+	font-optical-sizing: var(--_font-optical-sizing);
+
+	--_font-kerning: ;
+	font-kerning: var(--_font-kerning);
+
+	--_font-feature-settings: ;
+	font-feature-settings: var(--_font-feature-settings);
+
+	--_font-variation-settings: ;
+	font-variation: var(--_font-variation);
+
+	--_text-rendering: auto;
+	text-rendering: var(--_text-rendering);
+
+	--_color: buttontext;
+	color: var(--_color);
+
+	--_letter-spacing: normal;
+	letter-spacing: var(--_letter-spacing);
+
+	--_word-spacing: normal;
+	word-spacing: var(--_word-spacing);
+
+	--_line-height: normal;
+	line-height: var(--_line-height);
+
+	--_text-transform: none;
+	text-transform: var(--_text-transform);
+
+	--_text-indent: 0px;
+	text-indent: var(--_text-indent);
+
+	--_text-shadow: none;
+	text-shadow: var(--_text-shadow);
+
+	--_display: inline-block;
+	display: var(--_display);
+
+	--_text-align: center;
+	text-align: var(--_text-align);
+
+	--_align-items: flex-start;
+	align-items: var(--_align-items);
+
+	--_cursor: default;
+	cursor: var(--_cursor);
+
+	--_box-sizing: border-box;
+	box-sizing: var(--_box-sizing);
+
+	--_writing-mode: horizontal-tb !important;
+	writing-mode: var(--_writing-mode);
+
+	--_margin: 0em;
+	margin: var(--_margin);
+
+	--_padding-block: 1px;
+	padding-block: var(--_padding-block);
+
+	--_padding-inline: 6px;
+	padding-inline: var(--_padding-inline); */
+
+/* -----------------------------BORDERS-------------------------------- */
+/* --border-top-width: medium;
+  --border-right-width: medium;
+  --border-bottom-width: medium;
+  --border-left-width: medium;
+  --border-top-style: none;
+  --border-right-style: none;
+  --border-bottom-style: none;
+  --border-left-style: none;
+  --border-top-color: currentcolor;
+  --border-right-color: currentcolor;
+  --border-bottom-color: currentcolor;
+  --border-left-color: currentcolor;
+  --border-top-left-radius: 0;
+  --border-top-right-radius: 0;
+  --border-bottom-right-radius: 0;
+  --border-bottom-left-radius: 0; */
+
+/* Border shorthand property */
+/* --border-top: medium none currentcolor;
+	--border-right: medium none currentcolor;
+	--border-bottom: medium none currentcolor;
+	--border-left: medium none currentcolor;
+	 */
+/* Border shortest shorthand property */
+/* --border: medium none currentcolor; */
+
+/* Border radius shorthand property */
+/* --border-radius: 0;
+
+
+	border-width: var(--border-top-width) var(--border-right-width) var(--border-bottom-width) var(--border-left-width);
+  border-style: var(--border-top-style) var(--border-right-style) var(--border-bottom-style) var(--border-left-style);
+  border-color: var(--border-top-color) var(--border-right-color) var(--border-bottom-color) var(--border-left-color);
+  border-top-left-radius: var(--border-top-left-radius);
+  border-top-right-radius: var(--border-top-right-radius);
+  border-bottom-right-radius: var(--border-bottom-right-radius);
+  border-bottom-left-radius: var(--border-bottom-left-radius);
+	/* -------------------------------------------------------------- */
+/* --_border-width: 2px;
+	border-width: var(--_border-width);
+
+	--_border-style: outset;
+	border-style: var(--_border-style);
+
+	--_border-color: buttonborder;
+	border-color: var(--_border-color);
+
+	--_border-image: initial;
+	border-image: var(--_border-image);
+ */
